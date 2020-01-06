@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Righteous", cursive;
+  background-color: rgb(216, 55, 55);
+  color: black;
+
+}
+
+
+/* On screens that are 992px wide or less, the background color is blue */
+@media screen and (max-width: 992px) {
+  body {
+    background-color: rgb(88, 86, 88);
+    color: white;
+  }
+}
+
+/* On screens that are 600px wide or less, the background color is olive */
+@media screen and (max-width: 600px) {
+  body {
+    background-color: olive;
+    color: white;
+  }
+}

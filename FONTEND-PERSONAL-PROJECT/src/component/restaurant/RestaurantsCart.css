@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
+body{
+  font-family: "Righteous", cursive;
+}
+#card {
+    background-color: rgb(255, 255, 255);
+    opacity: 0.95;
+	  -webkit-transition: -webkit-transform 0.35s;
+	  transition: transform 0.20s;
+	  -webkit-transform-origin: 50% 50%;
+     transform-origin: 50% 50%;
+     border-radius: 10px 10px 10px 10px;
+  
+  } 
+
+  #card img:hover{
+    -webkit-transform: scale3d(0.95,0.95,1);
+	   transform: scale3d(0.95,0.95,1);
+   } 

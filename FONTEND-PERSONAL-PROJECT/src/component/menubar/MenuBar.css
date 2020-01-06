@@ -1,0 +1,53 @@
+
+#logo-brand{
+    color: rgb(0, 0, 0);
+    font-family: 'Baloo Paaji', cursive;
+    font-weight: bold;
+    font-size: large;
+    transition: 0.3s;
+
+}
+#logo-brand:hover{
+    color: rgb(253, 0, 0);
+}
+#buttonSignUp {
+    background-color:#008CBA;
+    color: rgb(255, 255, 255);
+    font-family: 'Rammetto One', cursive;
+    font-weight: 300px;
+    font-size: 1rem;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+#buttonSignUp:hover{
+    background-color:rgb(99, 144, 180);
+    color: rgb(3, 3, 3);
+}
+#buttonLogin {
+    background-color:snow;
+    color: rgb(0, 0, 0);
+    font-family: 'Rammetto One', cursive;
+    font-weight: 300px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+#buttonLogin:hover{
+    background-color:#d1d1d1;
+    color: rgb(3, 3, 3);
+}
+
+#restaurant{
+    color: rgb(204, 0, 0);
+    font-family: 'Baloo Paaji', cursive;
+    font-weight: bold;
+    transition: 0.3s;
+
+}
+#restaurant:hover{
+    color: rgb(0, 0, 0);
+}
+
+
+
+
