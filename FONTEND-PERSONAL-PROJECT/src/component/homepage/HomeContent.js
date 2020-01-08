@@ -30,9 +30,7 @@ export default class ContentHome extends Component {
   };
 
   render() {
-    const { topCuisines, populars } = this.state;
-    // console.log("topCuisines", topCuisines);
-    // console.log("populars", populars);
+  
     return (
       // Start Container
       <Container style={{ marginTop: "30px", marginBottom: "50px" }}>

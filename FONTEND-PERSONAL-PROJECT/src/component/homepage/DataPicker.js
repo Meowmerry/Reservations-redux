@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col, } from "antd";
-
+import { Row, Col } from "antd";
 
 export default class DataPicker extends Component {
   state = {
@@ -22,7 +21,6 @@ export default class DataPicker extends Component {
     clearInterval(this.state.intervalId);
   }
 
-
   render() {
     const imageList = [
       "images/background-01.jpg",
@@ -36,7 +34,7 @@ export default class DataPicker extends Component {
 
     console.log(imageList[this.state.imageIndex]);
     return (
-      <Row >
+      <Row>
         <div
           className="datapicker"
           style={{
@@ -45,10 +43,10 @@ export default class DataPicker extends Component {
             height: "500px"
           }}
         >
-          <Row type="flex" justify="center" align="middle" style={{fontSize: 40, color: '#e22b5a' }}>
-          <Row style={{marginTop: '3%'}} 
-          
-          ><Col xs={24} lg={24}>Find your table for any occasion</Col></Row>
+          <Row type="flex"  justify="center">
+            <Col xs={24} lg={10} style={{ fontSize: "250%", color: "#e22b5a", marginTop: "3%" }}>
+              Find your table for any occasion
+            </Col>
           </Row>
         </div>
       </Row>

@@ -18,6 +18,25 @@ const failLoginNotification = (message) => {
   });
 };
 
+
+
+const successSignUpNotification = (message) => {
+  notification.open({
+    message: 'SignUp successful',
+    description:'Enjoy with open your table',
+    icon: <Icon type="smile" style={{ color: '#54b600' }} />,
+  });
+};
+
+
+const failSignUpNotification = (message) => {
+  notification.open({
+    message: 'SignUp fail',
+    description: "Plese check your username and password",
+    icon: <Icon type="frown"  style={{ color: '#dc4d4d' }} />,
+  });
+};
+
 const successRestaurantRegisterNotification = (message) => {
   notification.open({
     message: 'Register successful',
@@ -35,4 +54,4 @@ const failRestaurantRegisterNotification = (message) => {
   });
 };
 
-export { failLoginNotification, successLoginNotification,successRestaurantRegisterNotification, failRestaurantRegisterNotification}
+export { failLoginNotification, successLoginNotification,successRestaurantRegisterNotification, failRestaurantRegisterNotification,successSignUpNotification, failSignUpNotification}

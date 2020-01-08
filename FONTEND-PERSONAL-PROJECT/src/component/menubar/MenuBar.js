@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { Row, Col } from "antd";
+import { Row, Col,Avatar, Icon ,Menu } from "antd";
 import "./MenuBar.css";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { logout } from "../../redux/actions/actions";
-import { Menu, Icon } from "antd";
+import jwtDecode from "jwt-decode";
 
 class MenuBar extends Component {
   handleLogout = () => {
@@ -24,13 +24,26 @@ class MenuBar extends Component {
     });
   };
 
+  getUser = () => {
+    let token = localStorage.getItem("ACCESS_TOKEN");
+    if (token) {
+      return jwtDecode(token);
+    } else {
+      return {
+        role: "guest"
+      };
+    }
+  };
+
   render() {
+    const user = this.getUser()
+    console.log(user)
     return (
       <Row>
-        <Col xs={24} lg={12}>
+        <Col xs={4} lg={10}>
           <Row style={{ display: "flex", justifyItems: "center" }}>
-            <Col xs={12} lg={3}>
-              <Link to="/" title="logo">
+            <Col xs={4} lg={4}>
+              <Link to="/home" title="logo">
                 <img
                   src="https://willrice.rice.edu/resources/icons/space-reservation.svg"
                   alt="logo"
@@ -38,17 +51,22 @@ class MenuBar extends Component {
                 />
               </Link>
             </Col>
-
-            <Col xs={12} lg={6} style={{ marginTop: "20px" }}>
-              <Link to="/" title="brand">
-                <h1 id="logo-brand">OpenUpYourTable</h1>
-              </Link>
+            
+            <Col xs={0} lg={6} style={{ marginTop: "20px" }}>
+              <Link to="/home" title="brand">
+                <h2 id="logo-brand">OpenUpYourTable</h2>
+              </Link>   
             </Col>
           </Row>
         </Col>
-        <Col xs={24} lg={12}>
+        <Col xs={0} lg={4} style={{marginTop:'20px'}}>
+         <Col><h6>  Hello  : {user.name}
+         <Avatar src="https://image.flaticon.com/icons/png/512/45/45332.png" /></h6></Col>
+         </Col>
+
+       <Col xs={24} lg={10}>
           <Row type="flex" justify="end">
-            <Col xs={0} lg={14}>
+            <Col xs={24} lg={14}>
               <Menu
                 onClick={this.handleClick}
                 selectedKeys={[this.state.current]}
@@ -65,6 +83,7 @@ class MenuBar extends Component {
                     </Link>
                   </Menu.Item>
                 )}
+
                 {this.props.user.role === "guest" && (
                   <Menu.Item key="login">
                     <Link to="/login" title="login">
@@ -76,6 +95,7 @@ class MenuBar extends Component {
                     </Link>
                   </Menu.Item>
                 )}
+
                 {this.props.user.role !== "guest" && (
                   <Menu.Item key="logout">
                     <Link onClick={() => this.handleLogout()} to="#">
@@ -87,6 +107,7 @@ class MenuBar extends Component {
                     </Link>
                   </Menu.Item>
                 )}
+
                 {this.props.user.role === "guest" && (
                   <Menu.Item key="restaurant">
                     <Link to="/resgister" title="register">

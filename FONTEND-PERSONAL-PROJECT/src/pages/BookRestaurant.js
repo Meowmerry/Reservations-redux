@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Row, Col, Card, Form, Input, Button, Icon } from "antd";
 import Axios from "../config/axios.setup";
 import SuccessPage from "../component/restaurant/SuccessPage";
-import { failLoginNotification, successLoginNotification } from '../component/Notification/notification'
+import { failSignUpNotification, successSignUpNotification } from '../component/Notification/notification'
 
 
 class BookRestaurant extends Component {
@@ -45,12 +45,12 @@ class BookRestaurant extends Component {
             console.log(result);
             this.props.history.push('/login')
             window.location.reload(true);
-            successLoginNotification()
+            successSignUpNotification()
           })
           .catch(err => {
             console.error(err);
             this.props.form.resetFields()
-            failLoginNotification("something went wrong.")
+            failSignUpNotification("something went wrong.")
           });
         this.props.form.resetFields();
       }

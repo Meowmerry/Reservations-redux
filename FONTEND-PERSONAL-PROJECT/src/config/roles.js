@@ -13,9 +13,9 @@ const components = {
     },
     home: {
       component: 'Home',
-      url:'/'
+      url:'/home'
     },
-    resturant: {
+    restaurant: {
       component: 'RestaurantPage',
       url:'/restaurant'
     },
@@ -42,19 +42,26 @@ const components = {
     //role name as a key.
     owner: {
       routes: [...Object.values(components)],
+      redirect:'/home'
     },
     user: {
       routes: [
         components.restaurantRegistration,
         components.success,
         components.home,
-        components.failed
-      ]
+        components.failed,
+        components.restaurant,
+        components.reservation
+      ],
+      redirect:'/restaurant'
     },
     guest: {
       routes: [
         components.login,
         components.signup,
-      ]
+        components.home,
+        components.restaurant
+      ],
+      redirect:'/home'
     }
   }

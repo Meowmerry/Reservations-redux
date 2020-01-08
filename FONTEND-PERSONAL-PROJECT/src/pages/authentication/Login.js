@@ -20,7 +20,7 @@ class Login extends React.Component {
           .then(result => {
             const user = jwtDecode(result.data.token)
             this.props.login(user, result.data.token)
-            this.props.history.push('/')
+            this.props.history.push('/restaurant')
             window.location.reload(true);
             successLoginNotification()
           })
