@@ -1,5 +1,6 @@
 # Reservations-redux
 This project was bootstrapped with Create React App.
+![restaurant](https://user-images.githubusercontent.com/50789325/72543959-1a536680-38b9-11ea-84e6-ac6d4f6ab57f.jpg)
 
 # Available Scripts
 In the project directory, you can run:
