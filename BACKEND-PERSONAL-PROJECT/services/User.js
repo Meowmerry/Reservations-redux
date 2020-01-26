@@ -1,11 +1,11 @@
-const jwt = require("jsonwebtoken");
 const passport = require("passport");
+const jwt = require("jsonwebtoken");
 const config = require("../config/passport/passport");
 const bcrypt = require("bcryptjs");
 
 module.exports = (app, db) => {
   app.post('/registerUser', (req, res, next) => {
-    passport.authenticate('register', async (err, user, info) => {
+    passport.authenticate('register', (err, user, info) => {
       if (info !== undefined) {
         console.error(info.message);
         res.status(403).send(info.message);
@@ -54,6 +54,7 @@ module.exports = (app, db) => {
     })(req, res, next);
   });
  
+  
   app.put(
     "/change-password",
     passport.authenticate("jwt", { session: false }),

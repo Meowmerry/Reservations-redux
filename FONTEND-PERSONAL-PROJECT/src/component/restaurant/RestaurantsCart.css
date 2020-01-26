@@ -2,6 +2,9 @@
 body{
   font-family: "Righteous", cursive;
 }
+.ant-card-body{
+  padding: 5px !important;
+}
 #card {
     background-color: rgb(255, 255, 255);
     opacity: 0.95;
@@ -9,7 +12,8 @@ body{
 	  transition: transform 0.20s;
 	  -webkit-transform-origin: 50% 50%;
      transform-origin: 50% 50%;
-     border-radius: 10px 10px 10px 10px;
+     border-radius: 5px ;
+  
   
   } 
 

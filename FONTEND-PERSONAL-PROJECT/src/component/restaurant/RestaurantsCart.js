@@ -63,13 +63,13 @@ export class RestaurantsCart extends Component {
   render() {
     return (
       <Row
-        gutter={[12, 0]}
+        gutter={[0, 0]}
         type="flex"
         justify="center"
-        style={{ margin: "20px" }}
+        style={{ margin: "5px" }}
       >
         <Col xs={24} lg={5}>
-          <Card id='card' >
+          <Card>
             <RestaurantCategories
               categories={this.state.categoriesList}
               handleCategoriesIdFunc={this.handleCategoriesId}
@@ -79,20 +79,19 @@ export class RestaurantsCart extends Component {
         </Col>
 
         <Col xs={24} lg={12}>
-          <Card id='card'>
-            <Restaurants style={{marginLeft:'10px', marginRight:'10px'}}
-              restaurants={this.filterRestaurants()}
-              handleClickAddToReserve={this.handleClickAddToReserve}
-            />
-          </Card>
+          <Restaurants
+            restaurants={this.filterRestaurants()}
+            handleClickAddToReserve={this.handleClickAddToReserve}
+          />
         </Col>
 
         <Col xs={24} lg={5}>
-          <Card id='card'>
-          <RestaurantReservation
-            reserve={this.state.reserve}
-            selectedRestaurant={this.state.selectedRestaurant}       
-          /></Card>
+          <Card>
+            <RestaurantReservation
+              reserve={this.state.reserve}
+              selectedRestaurant={this.state.selectedRestaurant}
+            />
+          </Card>
         </Col>
       </Row>
     );

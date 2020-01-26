@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu, Row, Col } from 'antd'
+import { Menu, Row, Col, Card } from 'antd'
 
 export default class RestaurantCategories extends Component {
   renderCategories() {

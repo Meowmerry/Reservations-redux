@@ -4,7 +4,7 @@
     "password": "Meow1982!",
     "database": "reservation-system",
     "host": "127.0.0.1",
-    "dialect": "mysql",
+    "dialect": "mysql", 
     "salt_length": 12
    
   },

@@ -18,6 +18,7 @@ class Login extends React.Component {
           password: values.password
         })
           .then(result => {
+            console.log(result)
             const user = jwtDecode(result.data.token)
             this.props.login(user, result.data.token)
             this.props.history.push('/restaurant')

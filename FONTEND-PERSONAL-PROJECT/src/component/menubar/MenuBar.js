@@ -43,7 +43,7 @@ class MenuBar extends Component {
         <Col xs={4} lg={10}>
           <Row style={{ display: "flex", justifyItems: "center" }}>
             <Col xs={4} lg={4}>
-              <Link to="/home" title="logo">
+              <Link to="/" title="logo">
                 <img
                   src="https://willrice.rice.edu/resources/icons/space-reservation.svg"
                   alt="logo"
@@ -53,7 +53,7 @@ class MenuBar extends Component {
             </Col>
             
             <Col xs={0} lg={6} style={{ marginTop: "20px" }}>
-              <Link to="/home" title="brand">
+              <Link to="/" title="brand">
                 <h2 id="logo-brand">OpenUpYourTable</h2>
               </Link>   
             </Col>

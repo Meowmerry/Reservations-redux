@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Row, Col } from 'antd'
+import { Row, Col, Card } from 'antd'
 import Restaurant from './Restaurant'
 
 export default class Restaurants extends Component {
@@ -15,8 +15,9 @@ export default class Restaurants extends Component {
   render() {
     return (
       <Row>
+        <Card id='card' style={{marginLeft:'5px', marginRight:'5px'}}>
         {this.renderRestaurants()}
-      </Row>
+      </Card></Row>
     )
   }
 }

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Axios from "axios";
 import { Row, Col, Form, Input, Button, Icon } from "antd";
-import resgisterRestaurantSuccess from "../../component/restaurant/resgisterRestaurantSuccess";
 import {
   successRestaurantRegisterNotification,
   failRestaurantRegisterNotification

@@ -3,12 +3,13 @@ const config = require('../config.json')[env];
 
 const bcrypt = require('bcryptjs')
 const BCRYPT_SALT_ROUNDS = config.salt_length
-
 const passport = require('passport')
 const localStrategy = require('passport-local').Strategy
+
+const db = require('../../models')
+
 const JWTStrategy = require('passport-jwt').Strategy
 const extractJwt = require('passport-jwt').ExtractJwt
-const db = require('../../models')
 
 let jwtOptions = {
   secretOrKey:'Meow1982!'

@@ -80,17 +80,17 @@ class RestaurantReservation extends Component {
   render() {
     const { form } = this.props;
     return (
-      <Row>
-        <Card>
+      <Row justify="center" >
+       <Card id='card' style={{marginLeft:'5px', marginRight:'5px',marginBottom: '100px', textAlign:"center"}} >
           <Col span={24}>
-            <Row>
+            <Row >
               <h5>Make a reservation</h5>
             </Row>
-            <Row>
+            <Row  >
               <h6 style={{ color: "#1a237e" }}>
                 <Form.Item label="Resturant Name">
                   {form.getFieldDecorator("resturantName", {
-                    rules: [
+               rules: [
                       {
                         required: true,
                         message: "Please Select Restaurant Name"
@@ -104,10 +104,11 @@ class RestaurantReservation extends Component {
                       disabled={true}
                       style={{
                         color: "black",
-                        width: 200,
+                        width: '100%',
                         backgroundColor: "snow",
                         border: "solid silver 0.5px ",
-                        borderRadius: "5px "
+                        borderRadius: "5px ",
+                        justify:"center"
                       }}
                     />
                   )}
@@ -115,8 +116,9 @@ class RestaurantReservation extends Component {
               </h6>
             </Row>
           </Col>
+          <Row justify="center">
           <Form onSubmit={this.handleReserveRestaurant}>
-            <Col span={24}>
+            <Col span={24} >
               <Form.Item label="Date">
                 {form.getFieldDecorator("date", {
                   rules: [
@@ -126,7 +128,7 @@ class RestaurantReservation extends Component {
                     }
                   ]
                 })(
-                  <DatePicker
+                  <DatePicker 
                     onChange={this.handleDateOnchange}
                     value={this.state.date}
                     style={{
@@ -138,8 +140,8 @@ class RestaurantReservation extends Component {
                 )}
               </Form.Item>
             </Col>
-            <Col span={24}>
-              <Form.Item label="Time">
+            <Col span={24} >
+              <Form.Item label="Time" >
                 {form.getFieldDecorator("times", {
                   rules: [
                     {
@@ -148,7 +150,7 @@ class RestaurantReservation extends Component {
                     }
                   ]
                 })(
-                  <Select
+                  <Select 
                     showSearch
                     style={{
                       width: "100%",
@@ -226,6 +228,7 @@ class RestaurantReservation extends Component {
               </Form.Item>
             </Col>
           </Form>
+          </Row>
         </Card>
       </Row>
     );

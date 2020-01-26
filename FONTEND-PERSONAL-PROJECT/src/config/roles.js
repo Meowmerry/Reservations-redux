@@ -7,13 +7,13 @@ const components = {
       component: 'Signup',
       url: '/signup',
     },
-    restaurantRegistration: {
+    RestaurantRegistration: {
       component: 'RestaurantRegistration',
       url: '/resgister',
     },
     home: {
       component: 'Home',
-      url:'/home'
+      url:'/'
     },
     restaurant: {
       component: 'RestaurantPage',
@@ -46,12 +46,13 @@ const components = {
     },
     user: {
       routes: [
-        components.restaurantRegistration,
+        
         components.success,
         components.home,
         components.failed,
         components.restaurant,
-        components.reservation
+        components.reservation,
+        components.restaurantSuccess
       ],
       redirect:'/restaurant'
     },
@@ -60,7 +61,10 @@ const components = {
         components.login,
         components.signup,
         components.home,
-        components.restaurant
+        components.restaurant,
+        components.reservation,
+        components.RestaurantRegistration,
+
       ],
       redirect:'/home'
     }

@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Form, Input, Col, Button, Icon} from "antd";
 import Axios from "../../config/axios.setup";
-import { failLoginNotification, successLoginNotification } from '../../component/Notification/notification'
+import { successSignUpNotification, failSignUpNotification } from '../../component/Notification/notification'
 
 class Signup extends React.Component {
   constructor(props) {
@@ -46,12 +46,12 @@ class Signup extends React.Component {
             console.log(result);
             this.props.history.push('/login')
             window.location.reload(true);
-            successLoginNotification()
+            successSignUpNotification()
           })
           .catch(err => {
             console.error(err);
             this.props.form.resetFields()
-            failLoginNotification("something went wrong.")
+            failSignUpNotification("something went wrong.")
           });
         this.props.form.resetFields();
       }
